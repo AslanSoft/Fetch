@@ -17,6 +17,7 @@ fetch("https://fakestoreapi.com/products",{
    <img src="${e.image}" width="250px" height="250px"/>
    <h2>${e.title.slice(0,20)} ...</h2>
    <h1 class="prices">price:</h1>
+   <button class="button">add 🗑</button>
   `
   productList.appendChild(product)
  }):console.log('no data') 

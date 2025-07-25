@@ -23,6 +23,7 @@
 }
 
 .prices{
+    position: relative;
     margin-top: 40px;
     font-weight: 500;
     font-size: 26px;
@@ -30,6 +31,7 @@
     padding: 5px 5px;
     box-shadow: 0px 0px 1.2px lightgray;
     border-radius: 1px;
+    overflow: hidden;
 }
 
 .prices:hover{
@@ -37,15 +39,38 @@
     transition: 0.9s;
 }
 
-prices::before{
-    color: gold;
+.prices::before{
+    position: absolute;
+    content: "";
     width: 100%;
     height: 100%;
 }
 
-prices::after{
+.prices:hover::after{
+    position: absolute;
+    content: "";
     width: 100%;
     height: 100%;
     color: rgb(145, 243, 115);
-    background: rgb(181, 247, 161);
+}
+
+.button{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 80px;
+    border-radius: 20px;
+    background: gold;
+    box-shadow: 0px 0px 1px rgb(235, 226, 175);
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    font-size: 25px;
+    color: black;
+}
+
+.button:hover{
+    transform: scale(0.95);
+    transition: 0.9s;
 }
